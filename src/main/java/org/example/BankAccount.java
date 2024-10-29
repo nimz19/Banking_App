@@ -19,6 +19,7 @@ public class BankAccount {
         return AccountHolderName;
     }
 
+    //should test the following two methods
     //method to deposit and update amount
     public void deposit(double amount) {
         if (amount > 0) {
@@ -26,6 +27,7 @@ public class BankAccount {
         }
     }
 
+    //method to withdraw
     public void withdraw(double amount) {
         if (Balance - amount >= MinimumBalance) {
             Balance -= amount;
