@@ -56,7 +56,9 @@ Restricts withdrawals to the maxWithdrawalAmount.
 
 **Testing** 
 
-Tests are located in src/test/java/org/example and are written using JUnit 5. Key tests include:
+Tests are located in src/test/java/org/example and are written using JUnit 5. 
+
+Key tests include:
 
 BankAccountTest: Tests deposit, withdraw, and balance maintenance for the BankAccount class.
 
