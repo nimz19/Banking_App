@@ -13,24 +13,24 @@ public class BankAccountTest {
         account = new BankAccount("Izzah", 100.0, 10.0);
     }
 
-    @Test
+    @Test // checks if the initial balance is correctly set
     public void testInitialBalance() {
         Assertions.assertEquals(100.0, account.getBalance(), 0.0);
     }
 
-    @Test
+    @Test // verifies that depositing an amount correctly increases the balance
     public void testDeposit() {
         account.deposit(50.0);
         Assertions.assertEquals(150.0, account.getBalance(), 0.0);
     }
 
-    @Test
+    @Test //ensures that withdrawing an amount within the balance works
     public void testWithdrawWithinLimit() {
         account.withdraw(40.0);
         Assertions.assertEquals(60.0, account.getBalance(), 0.0);
     }
 
-    @Test
+    @Test //checks that withdrawing an amount below the minimum balance throws an IllegalArgumentException
     public void testWithdrawBelowMinimumBalance() {
         // Use assertThrows to check for an exception
         Assertions.assertThrows(IllegalArgumentException.class, () -> account.withdraw(95.0));
