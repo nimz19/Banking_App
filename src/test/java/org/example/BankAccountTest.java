@@ -15,12 +15,12 @@ public class BankAccountTest {
 
     @Test // checks if the initial balance is correctly set
     public void testInitialBalance() {
-        Assertions.assertEquals(100.0, account.getBalance(), 0.0);
+        Assertions.assertEquals(100.0, account.getBalance(), 0.0); //delta sets the allowable margin of error for comparison
     }
 
     @Test // verifies that depositing an amount correctly increases the balance
     public void testDeposit() {
-        account.deposit(50.0);
+        account.deposit(50.0); //deposits $50 into the account
         Assertions.assertEquals(150.0, account.getBalance(), 0.0);
     }
 
